@@ -38,6 +38,20 @@ router.post("/", (req,res)=>{
 
 });
 
+
+
+// --------------------------------PROYECTO FORNT-END SUBS-----------------------------------------------------
+
+router.get("/subs", (_req, res)=>{   //http://localhost:3001/api/diaries/subs
+
+    res.send(diaryServices.getSubs())
+})
+
+// ---------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------
+
+
+
 router.get("/:id", (req,res) => {
 
     // utilizamos la funcion findById que creamos en controllers para buscar por el id recibido por params
@@ -66,5 +80,8 @@ router.get("/:id", (req,res) => {
     }
 
 });
+
+
+
 
 export default router
