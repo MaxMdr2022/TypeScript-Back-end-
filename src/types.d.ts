@@ -51,3 +51,14 @@ export type DiaryEntrySinComentarios = Omit <DiaryEntry, "comment" >
 
 
 export type NewDiaryEntry = Omit <DiaryEntry, "id" >
+
+
+// ------------------------------PROYECTO FORNT-END SUBS-------------------------------------------------------
+
+export interface SubsEntry {
+
+    nick: string,
+    month: number,
+    profileURL: string,
+    description: string
+}
