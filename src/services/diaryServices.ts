@@ -1,6 +1,7 @@
 import diaryData from "./diaries.json" // importamos el json (API)
-import { DiaryEntry, DiaryEntrySinComentarios, NewDiaryEntry } from "../types" // importamos los tipos de datos de types.d.ts
+import { DiaryEntry, DiaryEntrySinComentarios, NewDiaryEntry, SubsEntry } from "../types" // importamos los tipos de datos de types.d.ts
 
+import subsData from "./subsApi.json"
 
 // le indicamos que diaries va a ser un arreglo con objetos que van a contener como tipos de datos, los de DiaryEntry. 
 // Y esos datos los va a tomar de la API (diaryData) 
@@ -65,3 +66,14 @@ export const findById = (id :number): DiaryEntrySinComentarios | undefined => {
 
     return undefined
 }
+
+
+// -------------------------PROYECTO FRONT-END TS----------------------------------------------------
+
+// Aprovenchando este back creo una ruta para utilizar en el proyeto de subscrioptores 
+
+const subs: Array<SubsEntry> = subsData as Array<SubsEntry>
+
+
+// funcion para traer las diary
+export const getSubs = (): SubsEntry[] => subs
